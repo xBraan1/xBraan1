@@ -9,7 +9,7 @@
 
 /* Base styles */
 html {
-  scroll-behavior: smooth;
+  /* Removed global scroll-behavior: smooth to prevent conflicts with programmatic scrolling */
   color-scheme: light;
 }
 
@@ -18,13 +18,11 @@ html.dark {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -59,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   outline-color: #a3a3a3;
 }
 
-/* Smooth page transitions */
+/* Smooth page transitions - only opacity, no transform to avoid scroll issues */
 main {
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -67,11 +65,9 @@ main {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
