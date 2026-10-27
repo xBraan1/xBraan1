@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import ErrorBoundary from './components/ErrorBoundary';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import Home from './pages/Home';
 import WomensSalon from './pages/WomensSalon';
 import MensBarbering from './pages/MensBarbering';
@@ -37,6 +38,7 @@ export default function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <HashRouter>
+          <GoogleAnalytics />
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />

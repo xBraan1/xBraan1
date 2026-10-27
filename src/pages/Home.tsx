@@ -1,11 +1,22 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Scissors, Sparkles, Award, Palette, ThumbsUp, Users, Star } from 'lucide-react';
+import { ArrowRight, Scissors, Sparkles, Award, Palette, ThumbsUp, Users, Star, Clock, Phone, MapPin } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import OptimizedImage from '../components/OptimizedImage';
+import SEO from '../components/SEO';
+import { getLocalBusinessSchema } from '../utils/localBusinessSchema';
+import { siteConfig } from '../config/site';
 
 export default function Home() {
+  const localBusinessSchema = getLocalBusinessSchema();
+  
   return (
     <PageTransition>
+      <SEO
+        title="xBraan1 — Premium Salon & Barbershop"
+        description="Expert haircuts, styling, coloring, beard grooming and more. Book your appointment at xBraan1, your premium salon and barbershop."
+        canonical="/"
+        jsonLd={localBusinessSchema}
+      />
       {/* Hero Section */}
       <section className="relative bg-neutral-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900" />
