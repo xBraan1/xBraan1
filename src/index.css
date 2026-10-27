@@ -27,7 +27,7 @@ html.dark {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Inter Fallback', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafaf9;
@@ -38,12 +38,24 @@ body {
 }
 
 /* Lock fonts - prevent user agent stylesheet overrides */
-* {
-  font-family: inherit;
+*, *::before, *::after {
+  font-family: inherit !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+body, body *, body *::before, body *::after {
+  font-family: 'Inter', 'Inter Fallback', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif !important;
+}
+
+/* Prevent browser font scaling */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Focus styles */
