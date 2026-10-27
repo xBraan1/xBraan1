@@ -1,17 +1,3 @@
 name = "xbraan1"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "dist"
-
-# Build settings
-[build]
-command = "npm run build"
-
-# Environment variables (add your own)
-# [vars]
-# VITE_PUBLIC_URL = "https://xbraan1.pages.dev"
-
-# Redirects for SPA routing
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200

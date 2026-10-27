@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# xBraan1 Cloudflare Deployment Script
+# xBraan1 Cloudflare Pages Deployment Script
 # This script automates the deployment process to Cloudflare Pages
 
 set -e  # Exit on error
 
-echo "🚀 xBraan1 Cloudflare Deployment"
-echo "================================"
+echo "🚀 xBraan1 Cloudflare Pages Deployment"
+echo "======================================"
 echo ""
 
 # Check if wrangler is installed
@@ -38,10 +38,19 @@ if [ ! -f "dist/index.html" ]; then
     exit 1
 fi
 
+# Check for required files
+if [ ! -f "dist/_redirects" ]; then
+    echo "⚠️  Warning: dist/_redirects not found. SPA routing may not work."
+fi
+
+if [ ! -f "dist/_headers" ]; then
+    echo "⚠️  Warning: dist/_headers not found. Security headers will not be applied."
+fi
+
 echo "✅ Build successful"
 echo ""
 
-# Deploy to Cloudflare Pages
+# Deploy to Cloudflare Pages (NOT wrangler deploy)
 echo "🌐 Deploying to Cloudflare Pages..."
 wrangler pages deploy dist --project-name=xbraan1
 
@@ -54,7 +63,7 @@ echo ""
 echo "🔧 Next steps:"
 echo "   1. Verify the site loads correctly"
 echo "   2. Test all pages and features"
-echo "   3. Add custom domain if needed"
-echo "   4. Configure environment variables"
+echo "   3. Test SPA routing (refresh on any page)"
+echo "   4. Add custom domain if needed"
 echo ""
-echo "📖 For more info, see CLOUDFLARE_DEPLOYMENT_GUIDE.md"
+echo "📖 For more info, see CLOUDFLARE_PAGES_CORRECT_SETUP.md"
