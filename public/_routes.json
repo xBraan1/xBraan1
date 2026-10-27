@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": [
+    "/assets/*",
+    "/favicon.svg",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/sw.js",
+    "/offline.html",
+    "/placeholder.svg",
+    "/llms.txt",
+    "/_headers"
+  ]
+}
