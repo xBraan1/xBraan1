@@ -1,17 +1,75 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Scissors, Sun, Moon } from 'lucide-react';
 import ScrollToTop from './ScrollToTop';
+import BackToTop from './BackToTop';
+import ReadingProgress from './ReadingProgress';
+import SearchModal from './SearchModal';
 import { useTheme } from '../context/ThemeContext';
+import { codeProtection } from '../utils/codeProtection';
 
 export default function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState<'accepted' | 'declined' | 'pending'>('pending');
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+
+  // Initialize code protection
+  useEffect(() => {
+    codeProtection.init();
+    return () => codeProtection.destroy();
+  }, []);
+
+  // Register service worker
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch((err) => {
+        console.log('SW registration failed:', err);
+      });
+    }
+  }, []);
+
+  // Check for cookie consent
+  useEffect(() => {
+    const stored = localStorage.getItem('xbraan1-cookie-consent');
+    if (stored) setCookieConsent(stored as 'accepted' | 'declined');
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-neutral-950 transition-colors duration-300">
       <ScrollToTop />
+      <ReadingProgress />
+      
+      {/* Cookie Consent Banner */}
+      {cookieConsent === 'pending' && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 shadow-lg p-4 transition-colors">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-neutral-700 dark:text-neutral-300">
+              We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  localStorage.setItem('xbraan1-cookie-consent', 'accepted');
+                  setCookieConsent('accepted');
+                }}
+                className="px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
+              >
+                Accept
+              </button>
+              <button
+                onClick={() => {
+                  localStorage.setItem('xbraan1-cookie-consent', 'declined');
+                  setCookieConsent('declined');
+                }}
+                className="px-4 py-2 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 text-sm font-medium rounded-md hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
+              >
+                Decline
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* Header */}
       <header className="bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 sticky top-0 z-50 transition-colors">
@@ -34,6 +92,9 @@ export default function Layout() {
               <Link to="/gallery" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Gallery</Link>
               <Link to="/team" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">Team</Link>
               <Link to="/about" className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors">About</Link>
+              
+              {/* Search Button */}
+              <SearchModal />
               
               {/* Dark Mode Toggle */}
               <button
@@ -158,6 +219,9 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+      
+      {/* Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }

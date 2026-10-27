@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url><loc>https://xbraan1.example.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://xbraan1.example.com/salon</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://xbraan1.example.com/barber</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://xbraan1.example.com/services</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://xbraan1.example.com/pricing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xbraan1.example.com/promotions</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/team</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xbraan1.example.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/booking</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://xbraan1.example.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/location</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/preparation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/policies</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://xbraan1.example.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://xbraan1.example.com/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://xbraan1.example.com/accessibility</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Services -->
+  <url><loc>https://xbraan1.example.com/services/consultation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/womens-cut</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/services/mens-cut</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/services/blowdry-style</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/formal-styling</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/silk-press</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/natural-hair-styling</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/braids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/locs</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/sew-in-weave</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/wig-installation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/colour-colouring</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/services/colour-highlights</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/colour-balayage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/colour-correction</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/treatment-deep-conditioning</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/services/treatment-bond-building</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/services/treatment-scalp</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/services/keratin-smoothing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/childrens-cut</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/fade</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xbraan1.example.com/services/line-up</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/beard-trim</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/hot-towel-shave</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/head-shave</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/services/textured-crop</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/afro-cut</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/design-lines</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/services/cut-beard-combo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/services/perm-relaxer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Team Members -->
+  <url><loc>https://xbraan1.example.com/team/jordan-mitchell</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/team/alex-rivera</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/team/sam-okafor</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/team/casey-thompson</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/team/devon-wright</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/team/mia-chen</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Gallery Items -->
+  <url><loc>https://xbraan1.example.com/gallery/mid-skin-fade-textured</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/low-taper-curls</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/balayage-long-layers</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/knotless-box-braids-waist</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/shaped-afro-lineup</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/textured-french-crop</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/sculpted-beard-taper</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/sleek-bob-blunt-fringe</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/bridal-loose-updo</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/drop-fade-waves</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/silk-press-sleek</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/vivid-red-colour</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/wig-lace-front</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/childrens-first-haircut</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/high-fade-design</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/layered-curtain-bangs</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/loc-retwist-style</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xbraan1.example.com/gallery/pompadour-hard-part</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Case Studies -->
+  <url><loc>https://xbraan1.example.com/case-studies/colour-correction-blonde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/case-studies/fade-transformation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xbraan1.example.com/case-studies/bridal-styling-package</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

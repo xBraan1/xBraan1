@@ -1,0 +1,66 @@
+# xBraan1
+
+> Premium salon and barbershop offering expert haircuts, colour, styling, braids, beard grooming and more.
+
+## About
+
+xBraan1 is a full-service salon and barbershop. We provide precision cuts, advanced colour techniques, natural hair care, braiding, extensions, barbering and grooming services. Our team specialises in working with all hair types and textures.
+
+## Services
+
+### Salon Services
+- Hair & Style Consultations
+- Women's Haircuts (precision cuts for all hair types)
+- Blow-Dry & Styling
+- Formal & Event Styling (bridal, prom, special occasions)
+- Silk Press & Blowout
+- Natural Hair Styling (twist-outs, braid-outs, protective styles)
+- Braids & Protective Styles (box braids, knotless braids, cornrows, twists, crochet)
+- Locs & Loc Maintenance
+- Sew-Ins, Weaves & Extensions
+- Wig Installation & Styling
+- Hair Colouring (full colour, root touch-ups, grey coverage)
+- Highlights & Lowlights
+- Balayage & Ombré
+- Colour Correction
+- Deep Conditioning & Hydration Treatments
+- Bond-Building & Repair
+- Scalp Treatments
+- Keratin & Smoothing Treatments
+- Perms & Chemical Texturizing
+- Children's Haircuts
+
+### Barber Services
+- Men's Haircuts (classic, modern, scissor)
+- Fade Haircuts (low, mid, high, skin, drop, burst, taper, shadow)
+- Line-Up & Shape-Up
+- Textured Crop & French Crop
+- Afro Cut & Natural Hair Cut
+- Beard Trim & Shaping
+- Hot-Towel Shave (straight-razor)
+- Head Shave
+- Hair Designs & Patterns
+- Haircut & Beard Combo Packages
+- Children's & Teen Haircuts
+
+## Website
+
+- **Home**: https://xbraan1.example.com/
+- **Salon**: https://xbraan1.example.com/salon
+- **Barber**: https://xbraan1.example.com/barber
+- **All Services**: https://xbraan1.example.com/services
+- **Pricing**: https://xbraan1.example.com/pricing
+- **Gallery**: https://xbraan1.example.com/gallery
+- **Team**: https://xbraan1.example.com/team
+- **About**: https://xbraan1.example.com/about
+- **Booking**: https://xbraan1.example.com/booking
+- **Contact**: https://xbraan1.example.com/contact
+- **Location**: https://xbraan1.example.com/location
+- **FAQ**: https://xbraan1.example.com/faq
+
+## Notes
+
+- Location details (address, phone, hours) are awaiting configuration by the business owner.
+- Online booking integration is prepared but not yet connected to a scheduling API.
+- All gallery images are reference/inspiration examples from licensed sources, not portfolio photographs.
+- Prices shown are starting prices; final pricing depends on hair length, density and complexity.

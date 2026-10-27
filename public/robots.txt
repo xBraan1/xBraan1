@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /booking/confirmation
+Disallow: /contact/thank-you
+
+Sitemap: https://xbraan1.example.com/sitemap.xml
