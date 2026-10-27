@@ -40,14 +40,17 @@ export default function Layout() {
       <ScrollToTop />
       <ReadingProgress />
       
-      {/* Cookie Consent Banner */}
+      {/* Cookie Consent Banner - positioned above mobile CTA */}
       {cookieConsent === 'pending' && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 shadow-lg p-4 transition-colors">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-neutral-700 dark:text-neutral-300">
-              We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-            </p>
-            <div className="flex gap-3">
+        <div className="fixed bottom-16 sm:bottom-4 left-4 right-4 z-[60] bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-2xl rounded-lg p-4 transition-colors">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">🍪 Cookie Consent</h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400">
+                We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+              </p>
+            </div>
+            <div className="flex gap-2 flex-shrink-0">
               <button
                 onClick={() => {
                   localStorage.setItem('xbraan1-cookie-consent', 'accepted');
@@ -55,7 +58,7 @@ export default function Layout() {
                 }}
                 className="px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-medium rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
               >
-                Accept
+                Accept All
               </button>
               <button
                 onClick={() => {
