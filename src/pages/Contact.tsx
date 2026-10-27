@@ -1,6 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
 
 export default function Contact() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate('/contact/thank-you');
+  };
+
   return (
     <PageTransition>
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -17,7 +25,7 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Name *</label>
                 <input type="text" id="name" required className="w-full px-3 py-2.5 border border-neutral-300 dark:border-neutral-700 rounded-md text-sm bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white" />
