@@ -7,12 +7,14 @@ import ReadingProgress from './ReadingProgress';
 import SearchModal from './SearchModal';
 import { useTheme } from '../context/ThemeContext';
 import { codeProtection } from '../utils/codeProtection';
+import { useFoldable } from '../utils/foldableDetector';
 
 export default function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cookieConsent, setCookieConsent] = useState<'accepted' | 'declined' | 'pending'>('pending');
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const { isFoldable, isFolded, isSpanned } = useFoldable();
 
   // Initialize code protection
   useEffect(() => {
@@ -35,8 +37,13 @@ export default function Layout() {
     if (stored) setCookieConsent(stored as 'accepted' | 'declined');
   }, []);
 
+  // Build foldable-specific classes
+  const foldableClasses = isFoldable 
+    ? `foldable-device ${isFolded ? 'foldable-folded' : 'foldable-unfolded'} ${isSpanned ? 'foldable-spanned' : ''}`
+    : '';
+
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-neutral-950 transition-colors duration-300">
+    <div className={`min-h-screen flex flex-col bg-stone-50 dark:bg-neutral-950 transition-colors duration-300 ${foldableClasses}`}>
       <ScrollToTop />
       <ReadingProgress />
       
@@ -45,7 +52,7 @@ export default function Layout() {
         <div className="fixed bottom-16 sm:bottom-4 left-4 right-4 z-[60] bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-2xl rounded-lg p-4 transition-colors">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex-1">
-              <h3 className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">🍪 Cookie Consent</h3>
+              <h3 className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Cookie Consent</h3>
               <p className="text-xs text-neutral-600 dark:text-neutral-400">
                 We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
               </p>

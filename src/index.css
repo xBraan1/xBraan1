@@ -153,6 +153,142 @@ img, video {
   }
 }
 
+/* ============================================
+   FOLDABLE DEVICE SUPPORT
+   ============================================ */
+
+/* Detect foldable devices using CSS environment variables */
+@supports (top: env(titlebar-area-y, 0)) {
+  :root {
+    --foldable-device: 1;
+  }
+}
+
+/* Viewport segments for dual-screen devices (Surface Duo) */
+@supports (left: env(viewport-segment-left-0-0-0-0, 0)) {
+  :root {
+    --viewport-segments: 1;
+  }
+}
+
+/* Folded state - narrow viewport */
+@media (max-width: 400px) and (max-aspect-ratio: 1/2) {
+  :root {
+    --fold-state: folded;
+  }
+  
+  /* Optimize for narrow folded screens */
+  .foldable-folded-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Reduce padding for narrow screens */
+  .foldable-folded-padding {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Stack grids vertically */
+  .foldable-folded-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Unfolded state - wide viewport */
+@media (min-width: 600px) and (min-aspect-ratio: 2/1) {
+  :root {
+    --fold-state: unfolded;
+  }
+  
+  /* Optimize for wide unfolded screens */
+  .foldable-unfolded-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Spanned mode - dual screen */
+@supports (left: env(viewport-segment-left-0-0-0-0, 0)) {
+  @media (horizontal-viewport-segments: 2) {
+    :root {
+      --spanned-mode: 1;
+    }
+    
+    /* Use both screens effectively */
+    .foldable-spanned-layout {
+      display: grid;
+      grid-template-columns: env(viewport-segment-width-0-0-0-0, 50%) env(viewport-segment-width-1-0-0-0, 50%);
+      gap: env(viewport-segment-left-1-0-0-0, 0px);
+    }
+    
+    /* Avoid placing content in the hinge area */
+    .foldable-avoid-hinge {
+      margin-left: env(viewport-segment-left-1-0-0-0, 0px);
+    }
+  }
+  
+  @media (vertical-viewport-segments: 2) {
+    /* Vertical spanned mode */
+    .foldable-vertical-spanned {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+/* Foldable-specific responsive breakpoints */
+@media (max-width: 280px) {
+  /* Extremely narrow (folded Galaxy Fold) */
+  .foldable-extra-narrow {
+    font-size: 0.875rem;
+  }
+  
+  .foldable-extra-narrow-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  /* Tablet-like unfolded state */
+  .foldable-tablet-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  /* Large unfolded state */
+  .foldable-large-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Safe areas for foldable devices */
+@supports (padding: max(0px)) {
+  .foldable-safe-area {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-top: max(1rem, env(safe-area-inset-top));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Prevent content from being hidden in the fold */
+.foldable-avoid-fold {
+  /* Add margin to avoid fold area */
+  margin-left: env(fold-left, 0px);
+  margin-right: env(fold-right, 0px);
+}
+
+/* Optimize touch targets for foldable devices */
+@media (pointer: coarse) {
+  .foldable-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 /* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

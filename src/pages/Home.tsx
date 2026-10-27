@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Scissors, Sparkles } from 'lucide-react';
+import { ArrowRight, Scissors, Sparkles, Award, Palette, ThumbsUp, Users, Star } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import OptimizedImage from '../components/OptimizedImage';
 
@@ -107,17 +107,22 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '✨', title: 'Expert Stylists', desc: '12+ years experience across all hair types' },
-              { icon: '🎨', title: 'Premium Products', desc: 'Only professional-grade, salon-quality products' },
-              { icon: '💯', title: 'Satisfaction Guaranteed', desc: "Not happy? We'll make it right, no questions asked" },
-              { icon: '🌟', title: 'Inclusive Space', desc: 'Welcoming all genders, hair types, and styles' },
-            ].map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
-              </div>
-            ))}
+              { icon: Award, title: 'Expert Stylists', desc: '12+ years experience across all hair types' },
+              { icon: Palette, title: 'Premium Products', desc: 'Only professional-grade, salon-quality products' },
+              { icon: ThumbsUp, title: 'Satisfaction Guaranteed', desc: "Not happy? We'll make it right, no questions asked" },
+              { icon: Users, title: 'Inclusive Space', desc: 'Welcoming all genders, hair types, and styles' },
+            ].map((item, i) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={i} className="text-center p-6 bg-white dark:bg-neutral-800 rounded-lg border border-neutral-100 dark:border-neutral-700">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center">
+                    <IconComponent size={24} className="text-neutral-700 dark:text-neutral-300" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -198,10 +203,13 @@ export default function Home() {
             { number: '10+', label: 'Years Experience' },
             { number: '5000+', label: 'Happy Clients' },
             { number: '30+', label: 'Services Offered' },
-            { number: '4.9★', label: 'Average Rating' },
+            { number: '4.9', label: 'Average Rating', hasStar: true },
           ].map((stat, i) => (
             <div key={i} className="text-center p-6 bg-neutral-50 dark:bg-neutral-800 rounded-lg">
-              <div className="text-3xl lg:text-4xl font-bold text-neutral-900 dark:text-white mb-2">{stat.number}</div>
+              <div className="text-3xl lg:text-4xl font-bold text-neutral-900 dark:text-white mb-2 flex items-center justify-center gap-1">
+                {stat.number}
+                {stat.hasStar && <Star size={28} className="fill-amber-400 text-amber-400" />}
+              </div>
               <div className="text-sm text-neutral-600 dark:text-neutral-400">{stat.label}</div>
             </div>
           ))}
@@ -224,7 +232,7 @@ export default function Home() {
               <div key={i} className="bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-100 dark:border-neutral-700">
                 <div className="flex gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <span key={j} className="text-amber-400">★</span>
+                    <Star key={j} size={16} className="fill-amber-400 text-amber-400" />
                   ))}
                 </div>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 italic">"{testimonial.text}"</p>

@@ -160,7 +160,7 @@ export class CodeProtection {
    * Add subtle watermark to console
    */
   private addWatermark(): void {
-    console.log('%c🎨 xBraan1', 'color: #000; font-size: 60px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);');
+    console.log('%cxBraan1', 'color: #000; font-size: 60px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);');
     console.log('%cPremium Salon & Barbershop', 'color: #666; font-size: 16px;');
     console.log('%c© 2024 xBraan1. All rights reserved.', 'color: #999; font-size: 12px;');
     console.log('%c⚠️ This is a protected website. Unauthorized copying or distribution is prohibited.', 'color: #ff0000; font-size: 14px; font-weight: bold;');
